@@ -57,3 +57,15 @@ Multithreaded shared memory algorithm for approximate b-Matching.
 	    Update b using db
 
 ```
+
+## How to run
+In order to run you need to apply set of commands:
+```bash
+    mkdir build
+    cd build
+    cmake ..
+    make
+    ./adorate <number of threads> ../road_PA.txt <number of methods>
+```
+Number of methods relates to file blimit.hpp, which contains function bvalue that returns b(v) for a given node, based on method and node id.
+Program returns approximation for every method from 0 to *number of methods* - 1.

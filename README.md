@@ -38,7 +38,7 @@ Multithreaded shared memory algorithm for approximate b-Matching.
 		Q = V
 		Q' = {}
 		while Q is not {}:
-			ffor all vertices u in Q in parallel:
+			for all vertices u in Q do in parallel:
 				i = 1
 				while i <= b(u) and N(u) ix not exhausted:
 					Let p in N(u) be an eligible partner of u;

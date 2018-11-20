@@ -34,26 +34,26 @@ Multithreaded shared memory algorithm for approximate b-Matching.
 **Input**: A graph G = (V;E;w) and a vector b. **Output**: A 1/2-approximate edge weighted b-Matching M.
 
 ```python
-	procedure parallal_b-suitor(G, b):
-    Q = V
-		Q' = {}
-		while Q is not {}:
-			for all vertices u in Q do in parallel:
-				i = 1
-				while i <= b(u) and N(u) ix not exhausted:
-					Let p in N(u) be an eligible partner of u;
-					if p is not NULL:
-						Lock p
-						if p is still eligible:
-							i = i + 1
-							Make u a Suitor of p
-							if u annuls the proposal of a vertex v:
-								Add v to Q'
-								Update db(v)
-						Unlock p
-					else:
-						N(u) = exhausted
-			Update Q using Q'
-			Update b using db
+    procedure parallal_b-suitor(G, b):
+        Q = V
+	Q' = {}
+	while Q is not {}:
+	    for all vertices u in Q do in parallel:
+	        i = 1
+		while i <= b(u) and N(u) ix not exhausted:
+		    Let p in N(u) be an eligible partner of u;
+		    if p is not NULL:
+			Lock p
+			if p is still eligible:
+			    i = i + 1
+			    Make u a Suitor of p
+			    if u annuls the proposal of a vertex v:
+				Add v to Q'
+				Update db(v)
+			Unlock p
+		    else:
+		        N(u) = exhausted
+	    Update Q using Q'
+	    Update b using db
 
 ```

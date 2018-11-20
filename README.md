@@ -31,11 +31,11 @@ in the course of the algorithm.
 
 ## Pseudo code
 Multithreaded shared memory algorithm for approximate b-Matching.
-*Input*: A graph G = (V;E;w) and a vector b. *Output*: A 1/2-approximate edge weighted b-Matching M.
+**Input**: A graph G = (V;E;w) and a vector b. **Output**: A 1/2-approximate edge weighted b-Matching M.
 
 ```python
 	procedure parallal_b-suitor(G, b):
-		Q = V
+    Q = V
 		Q' = {}
 		while Q is not {}:
 			for all vertices u in Q do in parallel:
@@ -55,7 +55,5 @@ Multithreaded shared memory algorithm for approximate b-Matching.
 						N(u) = exhausted
 			Update Q using Q'
 			Update b using db
-
-
 
 ```
